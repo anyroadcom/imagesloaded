@@ -12,6 +12,7 @@
   if ( typeof define === 'function' && define.amd ) {
     // AMD
     define( [
+      'jquery',
       'eventEmitter/EventEmitter',
       'eventie/eventie'
     ], function( EventEmitter, eventie ) {
@@ -21,6 +22,7 @@
     // CommonJS
     module.exports = factory(
       window,
+      require('jquery'),
       require('wolfy87-eventemitter'),
       require('eventie')
     );
@@ -28,6 +30,7 @@
     // browser global
     window.imagesLoaded = factory(
       window,
+      window.jQuery,
       window.EventEmitter,
       window.eventie
     );
@@ -37,11 +40,10 @@
 
 // --------------------------  factory -------------------------- //
 
-function factory( window, EventEmitter, eventie ) {
+function factory( window, $, EventEmitter, eventie ) {
 
 'use strict';
 
-var $ = window.jQuery;
 var console = window.console;
 var hasConsole = typeof console !== 'undefined';
 
