@@ -1,0 +1,12 @@
+{
+  "name": "imagesloaded",
+  "version": "3.1.8",
+  "description": "JavaScript is all like _You images done yet or what?_",
+  "dependencies": {
+    "Wolfy87/EventEmitter": "4.x",
+    "desandro/eventie": ">=1.0.4 <2"
+  },
+
+  "main": "imagesloaded.js",
+  "scripts": [ "imagesloaded.js" ]
+}
